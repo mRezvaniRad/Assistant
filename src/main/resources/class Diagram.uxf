@@ -1,0 +1,1143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2.0">
+  <help_text/>
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>474</x>
+      <y>48</y>
+      <w>108</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>/BaseEntity/
+--
+-id : Long
+--
++Getter and Setter
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>456</x>
+      <y>0</y>
+      <w>144</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>All Classes Extends BaseEntity
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>12</y>
+      <w>18</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>126</y>
+      <w>192</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>Login
+--
+-user : User
+-userNamePassword : UserNamePassword
+--
++Getter and Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>228</y>
+      <w>126</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-firstName : String
+-lastName : String
+-birthCity : String
+-birthDate : Date
+-address :Address
+-accessLevel : AccessLevel
+--
++Getter and Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>198</x>
+      <y>132</y>
+      <w>120</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>UserNamePassword
+--
+- userName : String
+- password : String
+--
++Getter and Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>342</x>
+      <y>252</y>
+      <w>60</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>Admin
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>348</y>
+      <w>60</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Member</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>150</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 1
+m2= 1</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>498</x>
+      <y>186</y>
+      <w>18</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 1
+m2= 1</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>324</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>246</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+AccessLevel
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>252</y>
+      <w>84</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 1
+m2= 1</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>222</x>
+      <y>294</y>
+      <w>114</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Address
+--
+-tittle:String
+-country:String
+-city:String
+-street:String
+-allay:String
+-zip code:String
+-no :Integer
+-callInfo :CallInfo
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>42</x>
+      <y>306</y>
+      <w>114</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>CallInfo
+--
+-phone:String
+-cell:String
+-email:String
+-webSite:String
+--
++Getter And Seeter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>150</x>
+      <y>330</y>
+      <w>84</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= n
+m2= 1</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>642</x>
+      <y>180</y>
+      <w>96</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Goal
+--
+tittle:String
+discription:String
+--
++GetterAndSetter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>768</x>
+      <y>252</y>
+      <w>78</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Sprint
+--
+startDate:Date
+endDate:Date
+--
++GetterAndSetter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>642</x>
+      <y>360</y>
+      <w>90</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Task
+--
+-eventType:EventType
+--
++GetterAndSetter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>342</y>
+      <w>60</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+EventType
+--
+OPENED,
+CLOSED,
+REOPENED,
+WAITING,
+INPROGESS,
+DONE,
+TODO,
+ADDITIVE,
+DECREASING
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>444</x>
+      <y>714</y>
+      <w>60</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>CurrentFund
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>714</y>
+      <w>60</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>ReversFund
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>462</x>
+      <y>600</y>
+      <w>90</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>Fund
+--
+-payment:Long
+-paymentIncreament:Long
+-paymentDecreament:Long
+-date:timeStamp
+-discription:String
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>654</x>
+      <y>552</y>
+      <w>108</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Salary
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>582</x>
+      <y>564</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Demand
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>42</x>
+      <y>528</y>
+      <w>108</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Drug
+--
+-titttle:String
+-startDate:Date
+-endDate:Date
+-startTime:Time
+-endTime:Time
+-useCount:Integer
+-discription:String
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>510</y>
+      <w>96</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>MedicineType:String
+--
+-tittle:String
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>48</x>
+      <y>426</y>
+      <w>102</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>MedicineVisit
+--
+-fee:Long
+-date:TimeStamp
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>864</x>
+      <y>0</y>
+      <w>102</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>Reminder
+--
+-entity:IReminder
+-timeStart:Date
+-timeEnd:Date
+-warnigMessage:String
+-errorMessage:String
+-imageMessage:Byte[]
+-active:Boolean
+-repeate:Boolean
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>864</x>
+      <y>126</y>
+      <w>108</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>Event
+--
++entity:BaseEntity
++eventTime:Date
++destniy:BaseEntity
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>882</x>
+      <y>204</y>
+      <w>102</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>ReminderManager
+--
+-login:Login
+-reminder:Reminder
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>882</x>
+      <y>348</y>
+      <w>120</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Report
+--
+-proggesLine:ProggesLine
+-statuas:Statuas
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>312</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Statuas
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>264</y>
+      <w>60</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>ProggresLine
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>306</y>
+      <w>132</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= n
+m2= 1</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>252</y>
+      <w>66</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>84</y>
+      <w>18</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>366</x>
+      <y>354</y>
+      <w>126</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= n
+m2= 1</panel_attributes>
+    <additional_attributes>10.0;260.0;10.0;10.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>144</x>
+      <y>462</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= n
+m2= 1</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>90</x>
+      <y>480</y>
+      <w>18</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= n
+m2= 1</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>360</y>
+      <w>42</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= n
+m2= 1</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>534</x>
+      <y>192</y>
+      <w>120</w>
+      <h>186</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= n
+m2= 1</panel_attributes>
+    <additional_attributes>180.0;10.0;110.0;10.0;110.0;280.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>534</x>
+      <y>246</y>
+      <w>120</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= n
+m2= 1</panel_attributes>
+    <additional_attributes>180.0;10.0;150.0;10.0;150.0;210.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>642</x>
+      <y>234</y>
+      <w>78</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>SprintType
+--
+-tittle:String
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>996</x>
+      <y>648</y>
+      <w>84</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>به طور پیش فرض 
+موارد ذیل در دیتابیس ذخیره
+باشد.
+Check,
+Payment,
+Bill,
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>756</x>
+      <y>168</y>
+      <w>102</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>CRUD Daily schedule
+کراد برنامه روزانه
+CRUD UnPlaning Tasks
+کراد کارهای بدون برنامه
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>204</y>
+      <w>108</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes>
+    <additional_attributes>80.0;10.0;80.0;90.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>270</y>
+      <w>66</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>192</x>
+      <y>438</y>
+      <w>96</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>MedicineInfo
+--
+-tittle:String
+-address:Address
+-MedicineType:String
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>282</x>
+      <y>456</y>
+      <w>72</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= n
+m2= 1</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0;100.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>534</x>
+      <y>372</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= n
+m2= 1</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>726</x>
+      <y>390</y>
+      <w>66</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>774</x>
+      <y>552</y>
+      <w>90</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Costs
+--
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>534</x>
+      <y>456</y>
+      <w>156</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= n
+m2= 1</panel_attributes>
+    <additional_attributes>240.0;60.0;120.0;60.0;120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>558</y>
+      <w>102</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>PayFromCurrentFund</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>858</x>
+      <y>564</y>
+      <w>54</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>876</x>
+      <y>630</y>
+      <w>102</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Predictable</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>882</x>
+      <y>666</y>
+      <w>102</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Unpredictable</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>882</x>
+      <y>696</y>
+      <w>102</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>Debt</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>846</x>
+      <y>582</y>
+      <w>42</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0;50.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>822</x>
+      <y>582</y>
+      <w>72</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0;100.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>756</y>
+      <w>102</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>DebtType
+--
+-tittle:String
+-debts:List&lt;Debt&gt;
+--
++GetterAndSetter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>582</y>
+      <w>84</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;200.0;120.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>534</x>
+      <y>438</y>
+      <w>564</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= n
+m2= 1</panel_attributes>
+    <additional_attributes>780.0;570.0;920.0;570.0;920.0;120.0;380.0;40.0;310.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>924</x>
+      <y>708</y>
+      <w>18</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= n
+m2= 1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>678</x>
+      <y>468</y>
+      <w>90</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>paymentDetail
+--
+-payment:Long
+-date:timeStamp
+-discription:String
+-done:Boolean
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>762</x>
+      <y>486</y>
+      <w>66</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0;90.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>702</x>
+      <y>528</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>582</y>
+      <w>18</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>690</x>
+      <y>666</y>
+      <w>102</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Predictable</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>582</y>
+      <w>30</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0;30.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>582</y>
+      <w>42</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0;50.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>690</x>
+      <y>696</y>
+      <w>102</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Unpredictable</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>636</y>
+      <w>126</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>DepositToCurrentOrReversFund</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>696</x>
+      <y>6</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>948</x>
+      <y>708</y>
+      <w>96</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes>
+    <additional_attributes>140.0;10.0;140.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>558</x>
+      <y>624</y>
+      <w>102</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>DebtType
+--
+-tittle:String
+-debts:List&lt;Debt&gt;
+--
++GetterAndSetter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>606</x>
+      <y>510</y>
+      <w>84</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>606</x>
+      <y>582</y>
+      <w>18</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= n
+m2= 1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>498</x>
+      <y>540</y>
+      <w>18</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= n
+m2= 1</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>474</x>
+      <y>672</y>
+      <w>30</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>672</y>
+      <w>36</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>924</x>
+      <y>408</y>
+      <w>48</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>IReminder
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
