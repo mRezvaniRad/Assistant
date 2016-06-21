@@ -279,10 +279,14 @@ m2= 1</panel_attributes>
       <x>700</x>
       <y>420</y>
       <w>105</w>
-      <h>63</h>
+      <h>91</h>
     </coordinates>
     <panel_attributes>Task
 --
+-title:String
+-startDate:Date
+-endDate:Date
+-comment:String
 -eventType:EventType
 --
 +GetterAndSetter</panel_attributes>
