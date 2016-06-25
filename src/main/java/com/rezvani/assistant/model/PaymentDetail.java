@@ -1,16 +1,31 @@
 package com.rezvani.assistant.model;
 
-import java.util.Date;
+import javax.persistence.*;
+import java.util.Calendar;
 
 /**
  * Created by mrezvani on 6/12/2016.
  */
+@Entity
 public class PaymentDetail extends BaseEntity {
 
+    @Column(name = "payment")
     private Long payment;
-    private Date paymentDate;
-    private String discription;
+
+    @Column(name = "paymentDate")
+    @Temporal(TemporalType.DATE)
+    private Calendar paymentDate;
+
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "done")
     private Boolean done;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_member")
+    private Member member;
+
 
     public Long getPayment() {
         return payment;
@@ -20,20 +35,20 @@ public class PaymentDetail extends BaseEntity {
         this.payment = payment;
     }
 
-    public Date getPaymentDate() {
+    public Calendar getPaymentDate() {
         return paymentDate;
     }
 
-    public void setPaymentDate(Date paymentDate) {
+    public void setPaymentDate(Calendar paymentDate) {
         this.paymentDate = paymentDate;
     }
 
-    public String getDiscription() {
-        return discription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDiscription(String discription) {
-        this.discription = discription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Boolean getDone() {
@@ -42,5 +57,13 @@ public class PaymentDetail extends BaseEntity {
 
     public void setDone(Boolean done) {
         this.done = done;
+    }
+
+    public Member getMember() {
+        return member;
+    }
+
+    public void setMember(Member member) {
+        this.member = member;
     }
 }

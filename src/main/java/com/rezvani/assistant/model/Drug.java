@@ -1,20 +1,44 @@
 package com.rezvani.assistant.model;
 
+import org.hibernate.annotations.UpdateTimestamp;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import java.security.Timestamp;
 import java.util.Calendar;
-import java.util.Date;
 
 /**
  * Created by mrezvani on 6/12/2016.
  */
+@Entity
 public class Drug extends BaseEntity {
 
+    @Column(name = "title")
     private String tittle;
-    private Date startDate;
-    private Date endDate;
-    private Calendar startTime;
-    private Calendar endTime;
+
+    @Column(name = "startDate")
+    @Temporal(TemporalType.DATE)
+    private Timestamp startDate;
+
+    @Column(name = "endDate")
+    @Temporal(TemporalType.DATE)
+    private Timestamp endDate;
+
+    @Column(name = "startTime")
+    @Temporal(TemporalType.TIME)
+    private Timestamp startTime;
+
+    @Column(name = "endTime")
+    @Temporal(TemporalType.TIME)
+    private Timestamp endTime;
+
+    @Column(name = "useCount")
     private Integer useCount;
-    private String discription;
+
+    @Column(name = "description")
+    private String description;
 
     public String getTittle() {
         return tittle;
@@ -24,35 +48,35 @@ public class Drug extends BaseEntity {
         this.tittle = tittle;
     }
 
-    public Date getStartDate() {
+    public Timestamp getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(Timestamp startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public Timestamp getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(Timestamp endDate) {
         this.endDate = endDate;
     }
 
-    public Calendar getStartTime() {
+    public Timestamp getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Calendar startTime) {
+    public void setStartTime(Timestamp startTime) {
         this.startTime = startTime;
     }
 
-    public Calendar getEndTime() {
+    public Timestamp getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Calendar endTime) {
+    public void setEndTime(Timestamp endTime) {
         this.endTime = endTime;
     }
 
@@ -64,11 +88,11 @@ public class Drug extends BaseEntity {
         this.useCount = useCount;
     }
 
-    public String getDiscription() {
-        return discription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDiscription(String discription) {
-        this.discription = discription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

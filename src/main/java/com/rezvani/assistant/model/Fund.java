@@ -1,16 +1,32 @@
 package com.rezvani.assistant.model;
 
+import javax.persistence.*;
 import java.security.Timestamp;
 
 /**
  * Created by mrezvani on 6/12/2016.
  */
+
+@Entity
 public class Fund extends BaseEntity {
+    @Column(name = "payment")
     private Long payment;
-    private Long paymentIncreament;
-    private Long paymentDecreament;
+
+    @Column(name = "paymentIncrement")
+    private Long paymentIncrement;
+
+    @Column(name = "paymentDecrement")
+    private Long paymentDecrement;
+
+    @Column(name = "date")
     private Timestamp date;
-    private String discription;
+
+    @Column(name = "description")
+    private String description;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_member")
+    private Member member;
 
     public Long getPayment() {
         return payment;
@@ -20,20 +36,20 @@ public class Fund extends BaseEntity {
         this.payment = payment;
     }
 
-    public Long getPaymentIncreament() {
-        return paymentIncreament;
+    public Long getPaymentIncrement() {
+        return paymentIncrement;
     }
 
-    public void setPaymentIncreament(Long paymentIncreament) {
-        this.paymentIncreament = paymentIncreament;
+    public void setPaymentIncrement(Long paymentIncreament) {
+        this.paymentIncrement = paymentIncrement;
     }
 
-    public Long getPaymentDecreament() {
-        return paymentDecreament;
+    public Long getPaymentDecrement() {
+        return paymentDecrement;
     }
 
-    public void setPaymentDecreament(Long paymentDecreament) {
-        this.paymentDecreament = paymentDecreament;
+    public void setPaymentDecrement(Long paymentDecreament) {
+        this.paymentDecrement = paymentDecreament;
     }
 
     public Timestamp getDate() {
@@ -44,11 +60,19 @@ public class Fund extends BaseEntity {
         this.date = date;
     }
 
-    public String getDiscription() {
-        return discription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDiscription(String discription) {
-        this.discription = discription;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Member getMember() {
+        return member;
+    }
+
+    public void setMember(Member member) {
+        this.member = member;
     }
 }

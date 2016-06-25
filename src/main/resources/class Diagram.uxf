@@ -225,7 +225,7 @@ m2= 1</panel_attributes>
 -email:String
 -webSite:String
 --
-+Getter And Seeter</panel_attributes>
++Getter And Setter</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -252,7 +252,7 @@ m2= 1</panel_attributes>
     <panel_attributes>Goal
 --
 -tittle:String
--discription:String
+-description:String
 --
 +GetterAndSetter</panel_attributes>
     <additional_attributes/>
@@ -263,10 +263,11 @@ m2= 1</panel_attributes>
       <x>847</x>
       <y>294</y>
       <w>91</w>
-      <h>63</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>Sprint
 --
+-tittle:String
 -startDate:Date
 -endDate:Date
 --
@@ -357,7 +358,7 @@ DECREASING
 -paymentIncreament:Long
 -paymentDecreament:Long
 -date:timeStamp
--discription:String
+-description:String
 --
 +Getter And Setter</panel_attributes>
     <additional_attributes/>
@@ -404,7 +405,7 @@ DECREASING
 -startTime:Time
 -endTime:Time
 -useCount:Integer
--discription:String
+-description:String
 --
 +Getter And Setter</panel_attributes>
     <additional_attributes/>
@@ -951,7 +952,7 @@ m2= 1</panel_attributes>
 --
 -payment:Long
 -date:timeStamp
--discription:String
+-description:String
 -done:Boolean
 --
 +Getter And Setter</panel_attributes>

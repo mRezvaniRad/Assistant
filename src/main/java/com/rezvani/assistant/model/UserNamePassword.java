@@ -1,10 +1,16 @@
 package com.rezvani.assistant.model;
 
+import javax.persistence.Column;
+
 /**
  * Created by mrezvani on 6/12/2016.
  */
 public class UserNamePassword extends BaseEntity{
+
+    @Column(name = "userName")
     private String userName;
+
+    @Column(name = "password")
     private String password;
 
 

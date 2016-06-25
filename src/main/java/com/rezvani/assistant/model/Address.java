@@ -1,19 +1,46 @@
 package com.rezvani.assistant.model;
 
+
+import javax.persistence.*;
 import java.util.Set;
 
 /**
  * Created by mrezvani on 6/12/2016.
- */
+*/
+
+@Entity
 public class Address extends BaseEntity {
+    @Column(name = "title")
     private String tittle;
+
+    @Column(name = "country")
     private String country;
+
+    @Column(name = "city")
     private String city;
+
+    @Column(name = "street")
     private String street;
+
+    @Column(name = "allay")
     private String allay;
+
+    @Column(name = "zipCode")
     private String zipCode;
+
+    @Column(name = "no")
     private Integer no ;
+
+    @OneToMany(mappedBy = "address")
     private Set<CallInfo> callInfoes ;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_medicineInfo")
+    private MedicineInfo medicineInfo;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_user")
+    private User user;
 
     public String getTittle() {
         return tittle;
@@ -77,5 +104,21 @@ public class Address extends BaseEntity {
 
     public void setCallInfoes(Set<CallInfo> callInfoes) {
         this.callInfoes = callInfoes;
+    }
+
+    public MedicineInfo getMedicineInfo() {
+        return medicineInfo;
+    }
+
+    public void setMedicineInfo(MedicineInfo medicineInfo) {
+        this.medicineInfo = medicineInfo;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

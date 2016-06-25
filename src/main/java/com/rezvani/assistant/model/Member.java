@@ -1,17 +1,33 @@
 package com.rezvani.assistant.model;
 
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import java.util.List;
 
 /**
  * Created by mrezvani on 6/12/2016.
  */
+@Entity
 public class Member extends BaseEntity {
+    @OneToMany(mappedBy = "member")
     private List<MedicineType> medicineTypes;
+
+    @OneToMany(mappedBy = "member")
     private List<Goal> goals;
+
+    @OneToMany(mappedBy = "member")
     private List<SprintType> sprintTypes;
+
+    @OneToMany(mappedBy = "member")
     private List<Task> tasks;
+
+    @OneToMany(mappedBy = "member")
     private List<DebtType> debtTypes;
+
+    @OneToMany(mappedBy = "member")
     private List<PaymentDetail> paymentDetails;
+
+    @OneToMany(mappedBy = "member")
     private List<Fund> funds;
 
     public List<MedicineType> getMedicineTypes() {

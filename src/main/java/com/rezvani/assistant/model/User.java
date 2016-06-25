@@ -1,6 +1,10 @@
 package com.rezvani.assistant.model;
 
-import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import java.util.Calendar;
 import java.util.Set;
 
 /**
@@ -8,10 +12,20 @@ import java.util.Set;
  */
 public class User extends BaseEntity {
 
+    @Column(name = "firstName")
     private String firstName ;
+
+    @Column(name = "lastName")
     private String lastName ;
-    private String birthCity ;
-    private Date birthDate ;
+
+    @Column(name = "birthLocation")
+    private String birthLocation ;
+
+    @Column(name = "birthDate")
+    @Temporal(TemporalType.DATE)
+    private Calendar birthDate ;
+
+    @OneToMany(mappedBy = "user")
     private Set<Address> addresses ;
 
     public String getFirstName() {
@@ -30,19 +44,19 @@ public class User extends BaseEntity {
         this.lastName = lastName;
     }
 
-    public String getBirthCity() {
-        return birthCity;
+    public String getBirthLocation() {
+        return birthLocation;
     }
 
-    public void setBirthCity(String birthCity) {
-        this.birthCity = birthCity;
+    public void setBirthLocation(String birthLocation) {
+        this.birthLocation = birthLocation;
     }
 
-    public Date getBirthDate() {
+    public Calendar getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(Calendar birthDate) {
         this.birthDate = birthDate;
     }
 

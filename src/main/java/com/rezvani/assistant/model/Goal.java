@@ -1,11 +1,22 @@
 package com.rezvani.assistant.model;
 
+import javax.persistence.*;
+
 /**
  * Created by mrezvani on 6/12/2016.
  */
+@Entity
 public class Goal extends BaseEntity {
+
+    @Column(name = "tittle")
     private String tittle;
-    private String discription;
+
+    @Column(name = "description")
+    private String description;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_member")
+    private Member member;
 
     public String getTittle() {
         return tittle;
@@ -15,11 +26,19 @@ public class Goal extends BaseEntity {
         this.tittle = tittle;
     }
 
-    public String getDiscription() {
-        return discription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDiscription(String discription) {
-        this.discription = discription;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Member getMember() {
+        return member;
+    }
+
+    public void setMember(Member member) {
+        this.member = member;
     }
 }

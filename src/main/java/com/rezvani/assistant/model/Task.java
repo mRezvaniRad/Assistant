@@ -1,17 +1,33 @@
 package com.rezvani.assistant.model;
 
-import java.util.Date;
+import javax.persistence.*;
+import java.util.Calendar;
 
 /**
  * Created by mrezvani on 6/12/2016.
  */
 public class Task extends BaseEntity {
 
+    @Column(name = "tittle")
     private String title;
-    private Date startDate;
-    private Date endDate;
+
+    @Column(name = "startDate")
+    @Temporal(TemporalType.DATE)
+    private Calendar startDate;
+
+    @Column(name = "endDate")
+    @Temporal(TemporalType.DATE)
+    private Calendar endDate;
+
+    @Column(name = "comment")
     private String comment;
-    private EntityType entityType;
+
+    @Column(name = "eventType")
+    private String eventType;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_member")
+    private Member member;
 
     public String getTitle() {
         return title;
@@ -21,19 +37,19 @@ public class Task extends BaseEntity {
         this.title = title;
     }
 
-    public Date getStartDate() {
+    public Calendar getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(Calendar startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public Calendar getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(Calendar endDate) {
         this.endDate = endDate;
     }
 
@@ -45,11 +61,19 @@ public class Task extends BaseEntity {
         this.comment = comment;
     }
 
-    public EntityType getEntityType() {
-        return entityType;
+    public String getEventType() {
+        return eventType;
     }
 
-    public void setEntityType(EntityType entityType) {
-        this.entityType = entityType;
+    public void setEventType(String eventType) {
+        this.eventType = eventType;
+    }
+
+    public Member getMember() {
+        return member;
+    }
+
+    public void setMember(Member member) {
+        this.member = member;
     }
 }

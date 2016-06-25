@@ -1,14 +1,28 @@
 package com.rezvani.assistant.model;
 
+import javax.persistence.*;
+
 /**
  * Created by mrezvani on 6/12/2016.
  */
+@Entity
 public class CallInfo extends BaseEntity {
 
+    @Column(name = "phone")
     private String phone;
+
+    @Column(name ="cell")
     private String cell;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "webSite")
     private String webSite;
+
+    @ManyToOne(fetch = FetchType.LAZY )
+    @JoinColumn(name = "fk_addr")
+    private Address address;
 
     public String getPhone() {
         return phone;
@@ -40,5 +54,13 @@ public class CallInfo extends BaseEntity {
 
     public void setWebSite(String webSite) {
         this.webSite = webSite;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }
