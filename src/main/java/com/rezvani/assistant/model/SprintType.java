@@ -6,13 +6,14 @@ import java.util.Set;
 /**
  * Created by mrezvani on 6/12/2016.
  */
+@Entity
+@Table(name = "tb_sprint_type")
 public class SprintType extends BaseEntity {
 
     @Column(name = "tittle")
     private String tittle;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_sprint")
+    @OneToMany(mappedBy = "sprintType")
     private Set<Sprint> sprint;
 
     @ManyToOne(fetch = FetchType.LAZY)

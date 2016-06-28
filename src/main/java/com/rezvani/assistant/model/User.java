@@ -1,15 +1,14 @@
 package com.rezvani.assistant.model;
 
-import javax.persistence.Column;
-import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 import java.util.Calendar;
 import java.util.Set;
 
 /**
  * Created by mrezvani on 6/12/2016.
  */
+@Entity
+@Table( name ="tb_User")
 public class User extends BaseEntity {
 
     @Column(name = "firstName")

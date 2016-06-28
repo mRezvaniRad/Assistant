@@ -7,6 +7,7 @@ import java.util.List;
  * Created by mrezvani on 6/12/2016.
  */
 @Entity
+@Table(name = "tb_medicine_info")
 public class MedicineInfo extends BaseEntity{
 
     @Column(name = "tittle")

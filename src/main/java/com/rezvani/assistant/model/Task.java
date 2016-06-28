@@ -6,6 +6,8 @@ import java.util.Calendar;
 /**
  * Created by mrezvani on 6/12/2016.
  */
+@Entity
+@Table(name = "tb_task")
 public class Task extends BaseEntity {
 
     @Column(name = "tittle")

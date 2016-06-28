@@ -7,12 +7,13 @@ import java.util.List;
  * Created by mrezvani on 6/12/2016.
  */
 @Entity
+@Table(name = "tb_medicineType")
 public class MedicineType extends BaseEntity {
 
     @Column(name = "tittle")
     private String tittle;
 
-    @OneToMany(mappedBy = "MedicineType")
+    @OneToMany(mappedBy = "medicineType")
     private List<MedicineInfo> medicineInfoes;
 
     @ManyToOne(fetch = FetchType.LAZY)

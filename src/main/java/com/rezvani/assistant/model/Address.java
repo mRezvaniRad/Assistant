@@ -9,6 +9,7 @@ import java.util.Set;
 */
 
 @Entity
+@Table( name ="tb_Address")
 public class Address extends BaseEntity {
     @Column(name = "title")
     private String tittle;

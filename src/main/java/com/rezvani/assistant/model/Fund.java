@@ -1,7 +1,7 @@
 package com.rezvani.assistant.model;
 
 import javax.persistence.*;
-import java.security.Timestamp;
+import java.util.Calendar;
 
 /**
  * Created by mrezvani on 6/12/2016.
@@ -19,7 +19,7 @@ public class Fund extends BaseEntity {
     private Long paymentDecrement;
 
     @Column(name = "date")
-    private Timestamp date;
+    private Calendar date;
 
     @Column(name = "description")
     private String description;
@@ -52,11 +52,11 @@ public class Fund extends BaseEntity {
         this.paymentDecrement = paymentDecreament;
     }
 
-    public Timestamp getDate() {
+    public Calendar getDate() {
         return date;
     }
 
-    public void setDate(Timestamp date) {
+    public void setDate(Calendar date) {
         this.date = date;
     }
 

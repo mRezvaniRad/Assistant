@@ -7,6 +7,7 @@ import java.util.List;
  * Created by mrezvani on 6/12/2016.
  */
 @Entity
+@Table( name ="tb_debt_type")
 public class DebtType extends BaseEntity {
 
     @Column(name = "tittle")
@@ -16,7 +17,7 @@ public class DebtType extends BaseEntity {
     private List<Debt> debts;
 
     @OneToMany(mappedBy = "debtType")
-    private List<Demand> demand;
+    private List<Demand> demands;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fk_member")
@@ -39,11 +40,11 @@ public class DebtType extends BaseEntity {
     }
 
     public List<Demand> getDemand() {
-        return demand;
+        return demands;
     }
 
-    public void setDemand(List<Demand> demand) {
-        this.demand = demand;
+    public void setDemand(List<Demand> demands) {
+        this.demands = demands;
     }
 
     public Member getMember() {

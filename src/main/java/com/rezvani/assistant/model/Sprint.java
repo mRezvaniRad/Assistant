@@ -21,7 +21,8 @@ public class Sprint extends BaseEntity {
     @Temporal(TemporalType.DATE)
     private Calendar endDate;
 
-    @OneToMany(mappedBy = "sprint")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_sprintType")
     private SprintType sprintType;
 
     public Calendar getStartDate() {

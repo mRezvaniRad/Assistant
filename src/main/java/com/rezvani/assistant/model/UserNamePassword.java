@@ -1,10 +1,14 @@
 package com.rezvani.assistant.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * Created by mrezvani on 6/12/2016.
  */
+@Entity
+@Table(name = "tb_usr_pass")
 public class UserNamePassword extends BaseEntity{
 
     @Column(name = "userName")

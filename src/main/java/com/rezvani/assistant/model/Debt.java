@@ -5,6 +5,7 @@ import javax.persistence.*;
 /**
  * Created by mrezvani on 6/21/2016.
  */
+@Entity
 public class Debt extends Costs {
 
     @ManyToOne(fetch= FetchType.LAZY)

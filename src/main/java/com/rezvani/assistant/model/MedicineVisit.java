@@ -1,7 +1,7 @@
 package com.rezvani.assistant.model;
 
 import javax.persistence.*;
-import java.security.Timestamp;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -10,8 +10,13 @@ import java.util.List;
 @Entity
 public class MedicineVisit extends BaseEntity {
 
+    @Column(name = "fee")
     private Long fee;
-    private Timestamp date;
+
+    @Column(name = "date")
+    private Calendar date;
+
+    @OneToMany(mappedBy ="medicineVisit")
     private List<Drug> drugs;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -26,11 +31,11 @@ public class MedicineVisit extends BaseEntity {
         this.fee = fee;
     }
 
-    public Timestamp getDate() {
+    public Calendar getDate() {
         return date;
     }
 
-    public void setDate(Timestamp date) {
+    public void setDate(Calendar date) {
         this.date = date;
     }
 

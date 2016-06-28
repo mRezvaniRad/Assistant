@@ -1,17 +1,15 @@
 package com.rezvani.assistant.model;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 /**
  * Created by mrezvani on 6/21/2016.
  */
 @Entity
+@Table(name = "tb_demand")
 public class Demand extends PaymentDetail {
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fk_debtType")
     private DebtType debtType;
 

@@ -2,17 +2,15 @@ package com.rezvani.assistant.model;
 
 import org.hibernate.annotations.UpdateTimestamp;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import java.security.Timestamp;
-import java.util.Calendar;
+import javax.persistence.*;
+import java.util.Date;
+import java.util.Date;
 
 /**
  * Created by mrezvani on 6/12/2016.
  */
 @Entity
+@Table(name = "tb_drug")
 public class Drug extends BaseEntity {
 
     @Column(name = "title")
@@ -20,25 +18,29 @@ public class Drug extends BaseEntity {
 
     @Column(name = "startDate")
     @Temporal(TemporalType.DATE)
-    private Timestamp startDate;
+    private Date startDate;
 
     @Column(name = "endDate")
     @Temporal(TemporalType.DATE)
-    private Timestamp endDate;
+    private Date endDate;
 
     @Column(name = "startTime")
     @Temporal(TemporalType.TIME)
-    private Timestamp startTime;
+    private Date startTime;
 
     @Column(name = "endTime")
     @Temporal(TemporalType.TIME)
-    private Timestamp endTime;
+    private Date endTime;
 
     @Column(name = "useCount")
     private Integer useCount;
 
     @Column(name = "description")
     private String description;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_medicineVisit")
+    private MedicineVisit medicineVisit;
 
     public String getTittle() {
         return tittle;
@@ -48,35 +50,35 @@ public class Drug extends BaseEntity {
         this.tittle = tittle;
     }
 
-    public Timestamp getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Timestamp startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
-    public Timestamp getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Timestamp endDate) {
+    public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
 
-    public Timestamp getStartTime() {
+    public Date getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Timestamp startTime) {
+    public void setStartTime(Date startTime) {
         this.startTime = startTime;
     }
 
-    public Timestamp getEndTime() {
+    public Date getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Timestamp endTime) {
+    public void setEndTime(Date endTime) {
         this.endTime = endTime;
     }
 
@@ -94,5 +96,13 @@ public class Drug extends BaseEntity {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public MedicineVisit getMedicineVisit() {
+        return medicineVisit;
+    }
+
+    public void setMedicineVisit(MedicineVisit medicineVisit) {
+        this.medicineVisit = medicineVisit;
     }
 }
